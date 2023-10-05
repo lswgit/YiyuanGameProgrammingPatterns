@@ -3,7 +3,7 @@ import { Singleton } from "./Singleton";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class FactoryMethodTest extends cc.Component {
+export default class SingletonTest extends cc.Component {
 
     start() {
 

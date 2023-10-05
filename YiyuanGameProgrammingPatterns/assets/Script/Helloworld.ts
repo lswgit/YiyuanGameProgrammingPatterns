@@ -1,6 +1,7 @@
 import AbstractFactoryTest from "./AbstractFactory/AbstractFactoryTest";
 import BuilderTest from "./Builder/BuilderTest";
 import FactoryMethodTest from "./FactoryMethod/FactoryMethodTest";
+import PrototypeTest from "./Prototype/PrototypeTest";
 import SingletonTest from "./Singleton/SingletonTest";
 
 const { ccclass, property } = cc._decorator;
@@ -21,6 +22,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(FactoryMethodTest);
         // this.addComponent(AbstractFactoryTest);
         // this.addComponent(BuilderTest);
-        this.addComponent(SingletonTest);
+        // this.addComponent(SingletonTest);
+        this.addComponent(PrototypeTest);
     }
 }
