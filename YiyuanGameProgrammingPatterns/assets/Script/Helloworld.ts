@@ -2,6 +2,7 @@ import AbstractFactoryTest from "./AbstractFactory/AbstractFactoryTest";
 import AdapterTest from "./Adapter/AdapterTest";
 import BridgeTest from "./Bridge/BridgeTest";
 import BuilderTest from "./Builder/BuilderTest";
+import CompositeTest from "./Composite/CompositeTest";
 import FactoryMethodTest from "./FactoryMethod/FactoryMethodTest";
 import PrototypeTest from "./Prototype/PrototypeTest";
 import SingletonTest from "./Singleton/SingletonTest";
@@ -27,6 +28,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(SingletonTest);
         // this.addComponent(PrototypeTest);
         // this.addComponent(AdapterTest);
-        this.addComponent(BridgeTest);
+        // this.addComponent(BridgeTest);
+        this.addComponent(CompositeTest);
     }
 }
