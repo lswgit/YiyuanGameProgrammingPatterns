@@ -8,6 +8,7 @@ import DecoratorTest from "./Decorator/DecoratorTest";
 import FacadeTest from "./Facade/FacadeTest";
 import FactoryMethodTest from "./FactoryMethod/FactoryMethodTest";
 import PrototypeTest from "./Prototype/PrototypeTest";
+import ProxyTest from "./Proxy/ProxyTest";
 import SingletonTest from "./Singleton/SingletonTest";
 
 const { ccclass, property } = cc._decorator;
@@ -35,6 +36,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(CompositeTest);
         // this.addComponent(DecoratorTest);
         // this.addComponent(FacadeTest);
-        this.addComponent(CacheTest);
+        // this.addComponent(CacheTest);
+        this.addComponent(ProxyTest);
     }
 }
