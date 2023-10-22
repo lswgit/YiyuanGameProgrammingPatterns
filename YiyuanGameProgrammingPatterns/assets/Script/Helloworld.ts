@@ -4,6 +4,7 @@ import BridgeTest from "./Bridge/BridgeTest";
 import BuilderTest from "./Builder/BuilderTest";
 import CacheTest from "./Cache/CacheTest";
 import CoRTest from "./CoR/CoRTest";
+import CommandTest from "./Command/CommandTest";
 import CompositeTest from "./Composite/CompositeTest";
 import DecoratorTest from "./Decorator/DecoratorTest";
 import FacadeTest from "./Facade/FacadeTest";
@@ -39,6 +40,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(FacadeTest);
         // this.addComponent(CacheTest);
         // this.addComponent(ProxyTest);
-        this.addComponent(CoRTest);
+        // this.addComponent(CoRTest);
+        this.addComponent(CommandTest);
     }
 }
