@@ -21,6 +21,11 @@ export class FrameAnim extends cc.Component {
 
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite);
+        this.loadRes();
+    }
+
+    loadRes() {
+        cc.resources.release(this.url);
         cc.resources.load(this.url, cc.SpriteFrame, (err, spriteFrame) => {
             if (!err) {
                 this.spriteFrame = spriteFrame;
@@ -72,5 +77,13 @@ export class FrameAnim extends cc.Component {
                 break;
             }
         }
+    }
+
+    public SetUrl(url: string, anim: string, dir: number, loop = false) {
+        this.url = url;
+        this.curAnim = anim;
+        this.curDir = dir;
+        this.loop = loop;
+        this.loadRes();
     }
 }
