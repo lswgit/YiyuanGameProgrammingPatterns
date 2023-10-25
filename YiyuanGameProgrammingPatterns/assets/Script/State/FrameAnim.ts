@@ -21,7 +21,7 @@ export class FrameAnim extends cc.Component {
 
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite);
-        this.loadRes();
+        // this.loadRes();
     }
 
     loadRes() {

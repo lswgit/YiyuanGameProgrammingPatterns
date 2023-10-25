@@ -15,7 +15,7 @@ export class StateTest extends cc.Component {
         label.node.color = cc.Color.RED;
         label.string = "和8年主程一起学习设计模式之\n状态模式";
 
-        this.player.addComponent(FrameAnim);
+        this.player.addComponent(FrameAnim).SetUrl("State/scenePlayer_0", "stand", 3, true);
         this.currentState = new NormalState(this.player);
         this.currentState.enter();
 
