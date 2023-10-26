@@ -18,6 +18,8 @@ export class FrameAnim extends cc.Component {
     private frameInternal: number = 1 / 8;
     private frameTick: number = 0;
     private loop: boolean;
+    private onDoFrameAnimCB: any = null;
+    private onDoFrameAnimCBObj: any = null;
 
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite);
@@ -56,16 +58,28 @@ export class FrameAnim extends cc.Component {
                 this.sprite.spriteFrame = new cc.SpriteFrame(this.spriteFrame.getTexture(), rect);
                 this.curFrame++;
                 if (this.curFrame > this.endFrame) {
-                    this.curFrame = this.loop ? this.startFrame : 0;
+                    if (this.loop) {
+                        this.curFrame = this.startFrame;
+                    }
+                    else {
+                        this.curFrame = 0;
+                        if (this.onDoFrameAnimCB) {
+                            this.onDoFrameAnimCB.call(this.onDoFrameAnimCBObj);
+                            this.onDoFrameAnimCB = null;
+                            this.onDoFrameAnimCBObj = null;
+                        }
+                    }
                 }
             }
         }
     }
 
-    public DoFrameAnim(anim: string, dir: number, loop = false) {
+    public DoFrameAnim(anim: string, dir: number, loop: boolean = false, onDoFrameAnimCB: any = null, onDoFrameAnimCBObj: any = null) {
         this.curAnim = anim;
         this.curDir = dir;
         this.loop = loop;
+        this.onDoFrameAnimCB = onDoFrameAnimCB;
+        this.onDoFrameAnimCBObj = onDoFrameAnimCBObj;
         var anim = anim + "_" + dir;
         if (!this.spriteFrame || !this.frameData) return;
         for (let i = 0; i < this.frameData.labels.length; i++) {

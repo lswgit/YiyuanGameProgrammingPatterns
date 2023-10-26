@@ -11,6 +11,7 @@ import FacadeTest from "./Facade/FacadeTest";
 import FactoryMethodTest from "./FactoryMethod/FactoryMethodTest";
 import IteratorTest from "./Iterator/IteratorTest";
 import MementoTest from "./Memento/MementoTest";
+import ObserverTest from "./Observer/ObserverTest";
 import PrototypeTest from "./Prototype/PrototypeTest";
 import ProxyTest from "./Proxy/ProxyTest";
 import SingletonTest from "./Singleton/SingletonTest";
@@ -47,6 +48,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(CommandTest);
         // this.addComponent(StateTest);
         // this.addComponent(IteratorTest);
-        this.addComponent(MementoTest);
+        // this.addComponent(MementoTest);
+        this.addComponent(ObserverTest);
     }
 }
