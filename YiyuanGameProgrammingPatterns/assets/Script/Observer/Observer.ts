@@ -40,7 +40,7 @@ export class Subject {
     public notify(): void {
         console.log('Subject: 正在通知观察者...');
         for (const observer of this.observers) {
-            observer.update(this);
+            observer.update(this.state);
         }
     }
 
@@ -63,8 +63,8 @@ export class Observer implements Observer {
     constructor(private state: number, private player: cc.Node) {
 
     }
-    public update(subject: Subject): void {
-        if (subject.state == this.state) {
+    public update(state: number): void {
+        if (state == this.state) {
             this.player.getComponent(FrameAnim).DoFrameAnim("attack", 3, false, () => {
                 this.player.getComponent(FrameAnim).DoFrameAnim("stand", 3, true);
             }, this);
