@@ -16,6 +16,8 @@ import PrototypeTest from "./Prototype/PrototypeTest";
 import ProxyTest from "./Proxy/ProxyTest";
 import SingletonTest from "./Singleton/SingletonTest";
 import { StateTest } from "./State/StateTest";
+import StrategyTest from "./Strategy/StrategyTest";
+import TemplateMethodTest from "./TemplateMethod/TemplateMethodTest";
 
 const { ccclass, property } = cc._decorator;
 
@@ -49,6 +51,8 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(StateTest);
         // this.addComponent(IteratorTest);
         // this.addComponent(MementoTest);
-        this.addComponent(ObserverTest);
+        // this.addComponent(ObserverTest);
+        // this.addComponent(TemplateMethodTest);
+        this.addComponent(StrategyTest)
     }
 }

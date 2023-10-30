@@ -65,8 +65,6 @@ export class FrameAnim extends cc.Component {
                         this.curFrame = 0;
                         if (this.onDoFrameAnimCB) {
                             this.onDoFrameAnimCB.call(this.onDoFrameAnimCBObj);
-                            this.onDoFrameAnimCB = null;
-                            this.onDoFrameAnimCBObj = null;
                         }
                     }
                 }
