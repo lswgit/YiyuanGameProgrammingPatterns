@@ -10,6 +10,7 @@ import DecoratorTest from "./Decorator/DecoratorTest";
 import FacadeTest from "./Facade/FacadeTest";
 import FactoryMethodTest from "./FactoryMethod/FactoryMethodTest";
 import IteratorTest from "./Iterator/IteratorTest";
+import MediatorTest from "./Mediator/MediatorTest";
 import MementoTest from "./Memento/MementoTest";
 import ObserverTest from "./Observer/ObserverTest";
 import PrototypeTest from "./Prototype/PrototypeTest";
@@ -53,6 +54,7 @@ export default class Helloworld extends cc.Component {
         // this.addComponent(MementoTest);
         // this.addComponent(ObserverTest);
         // this.addComponent(TemplateMethodTest);
-        this.addComponent(StrategyTest)
+        // this.addComponent(StrategyTest);
+        this.addComponent(MediatorTest);
     }
 }

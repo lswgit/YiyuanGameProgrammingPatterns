@@ -73,6 +73,7 @@ export class FrameAnim extends cc.Component {
     }
 
     public DoFrameAnim(anim: string, dir: number, loop: boolean = false, onDoFrameAnimCB: any = null, onDoFrameAnimCBObj: any = null) {
+        if (anim == this.curAnim) return;
         this.curAnim = anim;
         this.curDir = dir;
         this.loop = loop;
